@@ -1,0 +1,35 @@
+<html>
+
+<body>
+
+    <script type="text/javascript">
+
+        var urls = [
+            "https://google.de",
+            "https://bing.com",
+        ]
+
+        var UPDATE_FREQ = 10 * 1000;
+
+        var current_url = 0;
+
+        var iframe = document.createElement("iframe");
+
+        iframe.width = "100%";
+        iframe.height = "100%";
+
+        function update_url() {
+            current_url = (current_url + 1) % (urls.length);
+            iframe.src = urls[current_url];
+            console.log("set url to " + urls[current_url]);
+            setTimeout(update_url, UPDATE_FREQ);
+        }
+
+        console.log("starting url cycling");
+        document.body.appendChild(iframe);
+        setTimeout(update_url, 0);
+
+    </script>
+</body>
+
+</html>
