@@ -41,7 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = __importDefault(require("axios"));
 var express_1 = __importDefault(require("express"));
-var PORT = 8080;
+var PORT = process.env.PORT || 8080;
 var API_KEY = "09819e0a74cb43b5cb25692b85869e99";
 function getTemperature(cityId) {
     return __awaiter(this, void 0, void 0, function () {
@@ -59,6 +59,12 @@ function getTemperature(cityId) {
     });
 }
 var app = express_1.default();
+app.get("/", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        res.status(200).send("Hello World");
+        return [2 /*return*/];
+    });
+}); });
 app.get("/temperature/:cityId", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var temparature, error_1;
     return __generator(this, function (_a) {
