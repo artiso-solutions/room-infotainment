@@ -12,6 +12,15 @@ interface Weather {
   main: WeatherMain;
 }
 
+/*
+City code:
+Prag=>3067696
+Rio=>3451189
+Kairo=>360630
+Kapstadt=>3369157
+Casablanka=>3687209
+*/
+
 async function getTemperature(cityId: string) {
   const resp = await axios.get<Weather>(
     `http://api.openweathermap.org/data/2.5/weather?id=${cityId}&APPID=${API_KEY}&units=metric`
