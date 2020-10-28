@@ -17,7 +17,7 @@ class MeetingInfo {
 class App extends React.Component {
     render() {
         loadAllMeetings();
-        displayMeeting('aa');
+        displayMeeting('AAMkADJkODJmZWYzLTYwODMtNDNhYS04MDE0LTUxYzg5ZDIwMjJkMgBGAAAAAAADapS3oXE5RIN0v1KfohlZBwAg7G5PCpzCQo8RBqzbAjF5AAAAAAENAACykf4v2OokRY16QMs5FG0XAAAABLHOAAA=');
         setInterval(uhrzeit, 1000);
 
         return (
@@ -47,7 +47,7 @@ function displayMeeting(id: string) {
             const opts: RequestInit = {
                 method: 'POST',
                 headers: headers,
-                body: JSON.stringify(new PostRequest('asdsad')),
+                body: JSON.stringify(new PostRequest('AAMkADJkODJmZWYzLTYwODMtNDNhYS04MDE0LTUxYzg5ZDIwMjJkMgBGAAAAAAADapS3oXE5RIN0v1KfohlZBwAg7G5PCpzCQo8RBqzbAjF5AAAAAAENAACykf4v2OokRY16QMs5FG0XAAAABLHOAAA=')),
             };
 
             fetch('https://localhost:44320/meetings/meetingInfo', opts)
