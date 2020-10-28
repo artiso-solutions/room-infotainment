@@ -1,7 +1,7 @@
 import axios from "axios";
 import express from "express";
 
-const PORT = 80;
+const PORT = process.env.PORT || 8080;
 const API_KEY = "09819e0a74cb43b5cb25692b85869e99";
 
 interface WeatherMain {
