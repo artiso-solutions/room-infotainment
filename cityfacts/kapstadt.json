@@ -1,0 +1,77 @@
+[
+  {
+    "Id": "Input",
+    "Title": "Input interpretation",
+    "Text": "Cape Town, Western Cape, South Africa"
+  },
+  {
+    "Id": "Population:CityData",
+    "Title": "Populations",
+    "Text": "city population | 3.74 million people (country rank: 2nd) (2011 estimate)\nmetro area population | 4.715 million people (Cape Town metro area) (2007 estimate)"
+  },
+  {
+    "Id": "Location:CityData",
+    "Title": "Location",
+    "Text": "Western Cape, South Africa"
+  },
+  {
+    "Id": "AdministrativeRegions:CityData",
+    "Title": "Administrative regions",
+    "Text": "region | Western Cape\ncountry | South Africa"
+  },
+  {
+    "Id": "CurrentTime:CityData",
+    "Title": "Current local time",
+    "Text": "3:24 pm SAST | Wednesday, October 28, 2020"
+  },
+  {
+    "Id": "WeatherPod:CityData",
+    "Title": "Current weather",
+    "Text": "20 °C | relative humidity: 53% | wind: 10 m/s | few clouds"
+  },
+  {
+    "Id": "CityHierarchyInfo:CityData",
+    "Title": "Nearby cities",
+    "Text": "Stellenbosch, Western Cape | 37 km (kilometers) east | 94263 people\nSomerset West, Western Cape | 38 km (kilometers) east-southeast | 183493 people\nAtlantis, Western Cape | 40 km (kilometers) north | 60266 people\nPaarl, Western Cape | 53 km (kilometers) east-northeast | 187865 people\nMalmesbury, Western Cape | 58 km (kilometers) north-northeast | 34991 people\nWorcester, Western Cape | 96 km (kilometers) east-northeast | 127597 people\n(straight-line distances between city centers)"
+  },
+  {
+    "Id": "AirportHierarchyInfo:CityData",
+    "Title": "Nearby airport",
+    "Text": "Cape Town International Airport | 14 km (kilometers) east-southeast\n(straight-line distances between city center and airport)"
+  },
+  {
+    "Id": "CompaniesInCity:CityData",
+    "Title": "Notable company headquarters",
+    "Text": "Naspers | 20196 employees (2019) | $2.473 billion per year (2006)"
+  },
+  {
+    "Id": "GeographicProperties:CityData",
+    "Title": "Geographic properties",
+    "Text": "elevation | 12 m"
+  },
+  {
+    "Id": "FeaturesHierarchyInfo:CityData",
+    "Title": "Nearby features",
+    "Text": "nuclear power site | Koeberg | 31 km (kilometers) north\nmountain | Matroosberg (2250 meters) | 127 km (kilometers) east-northeast\nmountain | Sneeuberg (2027 meters) | 170 km (kilometers) north-northeast\nmountain | Cedarberg (2026 meters) | 187 km (kilometers) north-northeast\n(straight-line distances between city center and feature coordinates)"
+  },
+  {
+    "Id": "OceansHierarchyInfo:CityData",
+    "Title": "Nearest sea",
+    "Text": "Atlantic Ocean (<5 km (kilometers)) \n(straight-line distance between city center and shore)"
+  },
+  {
+    "Id": "BasicInformation:CityData",
+    "Title": "Nicknames",
+    "Text": "The Mother City | The Tavern of the Seas"
+  },
+  {
+    "Id": "NotablePeople:CityData",
+    "Title": "Notable people born in Cape Town",
+    "Text": "Reeva Steenkamp (model, etc.) (1983)\nJustin Gabriel (wrestler, etc.) (1981)\nLesley-Ann Brandt (actor) (1981)\nJohn Maxwell Coetzee (novelist) (1940)\nJacques Henry Kallis (cricketer) (1975)\nLeon Botha (singer, etc.) (1985)\nBenni McCarthy (soccer player) (1977)\nWayde van Niekerk (athlete) (1992)\nJean Grae (rapper) (1976)\nKelly Hoppen (designer) (1959)\n..."
+  },
+  {
+    "Id": "FoundingDates:CityData",
+    "Title": "Founding date",
+    "Text": "1840 (180 years ago) (incorporation date)"
+  }
+]
