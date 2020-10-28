@@ -42,8 +42,10 @@ async function getWeather(cityId: string) {
 
 const app = express();
 
+app.use("/", express.static(__dirname + "/../../"));
 app.get("/", async (req, res) => {
-  res.status(200).send("Hello World");
+  res.sendFile("../index.html", { root: __dirname });
+  //res.status(200).send("Hello World");
 });
 
 app.get("/temperature/:cityId", async (req, res) => {
@@ -55,6 +57,7 @@ app.get("/temperature/:cityId", async (req, res) => {
     res.status(500).send(error);
   }
 });
+
 app.get("/weather/:cityId", async (req, res) => {
   try {
     const temparature = await getWeather(req.params.cityId);
