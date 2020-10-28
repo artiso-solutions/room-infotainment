@@ -1,0 +1,25 @@
+.infoText {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    color: white;
+    top: 70%;
+    font-size: 50pt;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+.time {
+    position: absolute;
+
+    left: 50%;
+    color: white;
+    font-size: 60pt;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+body {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7e/St_Vitus_Prague_September_2016-30b.jpg');
+    background-size: contain;
+}

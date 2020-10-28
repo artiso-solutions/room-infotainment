@@ -1,1 +1,44 @@
-<html>Meeting Info</html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1 id="uhr" class="time">Uhr</h1>
+        <h2 id="text" class="infoText">asd</h2>
+
+        <script type="text/javascript">
+
+            displayWelcome("Timo, Stephen");    
+            uhrzeit();
+
+            function uhrzeit() {
+                var jetzt = new Date(),
+                    h = jetzt.getHours(),
+                    m = jetzt.getMinutes(),
+                m = fuehrendeNull(m);
+                document.getElementById('uhr').innerHTML = h + ':' + m;
+                setTimeout(uhrzeit, 500);
+            }
+            
+            function fuehrendeNull(zahl) {
+                zahl = (zahl < 10 ? '0' : '' )+ zahl;  
+                return zahl;
+            }
+
+            function displayWelcome(participants){
+                setInfoText(["Herzlich willkommen",participants,"Schön, dass ihr da seid"])
+            }
+
+            function setInfoText(text){
+                var temp = "";
+                console.log(text.length);
+                for(i=0;i<text.length;i++){
+                    temp += text[i];
+                    temp += "<br/>";
+                }
+                document.getElementById('text').innerHTML = temp;
+            }
+        </script>
+    </body>
+</html>
