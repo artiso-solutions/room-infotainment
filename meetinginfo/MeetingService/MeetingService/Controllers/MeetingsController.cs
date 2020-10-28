@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MeetingService.Contracts;
+using MeetingService.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,32 +13,44 @@ namespace MeetingService.Controllers
     [ApiController]
     public class MeetingsController : ControllerBase
     {
+        private readonly GreetingService greetingService;
+        private readonly ExchangeMeetingService meetingService;
+
+        public MeetingsController(GreetingService greetingService, ExchangeMeetingService meetingService)
+        {
+            this.greetingService = greetingService;
+            this.meetingService = meetingService;
+        }
+
         [HttpGet]
         [Route("all")]
-        public IEnumerable<ScheduledMeeting> GetAllMeetings()
+        public async Task<IEnumerable<ScheduledMeeting>> GetAllMeetings()
         {
-            var list = new List<ScheduledMeeting>();
-            list.Add(new ScheduledMeeting(){Id="hallo"});
-            return list;
+            var meetings = await meetingService.GetAllMeetingsForToday();
+            return meetings;
         }
 
         [HttpGet]
         [Route("helloMessage")]
         public HelloMessage GetHelloMessage()
         {
-            return new HelloMessage() {Message = "Herzlich Willkommen"};
+            var greeting = greetingService.GetRandomHelloMessage();
+            return new HelloMessage {Message = greeting};
         }
 
         [HttpPost]
         [Route("meetingInfo")]
-        public MeetingInfo GetMeetingInfo([FromBody] RequestWithId request)
+        public async Task<MeetingInfo> GetMeetingInfo([FromBody] RequestWithId request)
         {
             var id = request.Id;
-            var list = new List<string>();
-            list.Add("Timo");
-            list.Add("Stephen");
-            list.Add("mueller@email.de");
-            return new MeetingInfo(){Participants = list, Body = "Ich lade euch zum Meeting ein",Subject = "Mein meeting"};
+            //var list = new List<string>();
+            //list.Add("Timo");
+            //list.Add("Stephen");
+            //list.Add("mueller@email.de");
+            //return new MeetingInfo(){Participants = list, Body = "Ich lade euch zum Meeting ein",Subject = "Mein meeting"};
+
+            var meetingInfo = await meetingService.GetMeetingInfo(id);
+            return meetingInfo;
         }
     }
 

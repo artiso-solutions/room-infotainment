@@ -8,6 +8,7 @@ namespace MeetingService.Contracts
     public class ScheduledMeeting
     {
         public string Id { get; set; }
+        public string Subject { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
     }
