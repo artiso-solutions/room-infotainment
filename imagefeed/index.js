@@ -97,14 +97,29 @@ function onFrame(event) {
   for (var i = 0; i < count; i++) {
     var item = project.activeLayer.children[i];
 
-    // Move the item 1/20th of its width to the right. This way
-    // larger circles move faster than smaller circles:
-    item.position.y += item.bounds.width / 20;
+    if (
+      weather == 'Rain' ||
+      weather == 'Drizzle' ||
+      weather == 'Thunderstorm'
+    ) {
+      // Move the item 1/20th of its width to the right. This way
+      // larger circles move faster than smaller circles:
+      item.position.y += item.bounds.width / 20;
+      // If the item has left the view on the right, move it back
+      // to the left:
+      if (item.bounds.top > view.size.width) {
+        item.position.y = -item.bounds.width;
+      }
+    } else {
+      // Move the item 1/20th of its width to the right. This way
+      // larger circles move faster than smaller circles:
+      item.position.x += item.bounds.width / 80;
 
-    // If the item has left the view on the right, move it back
-    // to the left:
-    if (item.bounds.top > view.size.width) {
-      item.position.y = -item.bounds.width;
+      // If the item has left the view on the right, move it back
+      // to the left:
+      if (item.bounds.left > view.size.width) {
+        item.position.x = -item.bounds.width;
+      }
     }
   }
 }
