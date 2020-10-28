@@ -9,7 +9,7 @@
 
         <script type="text/javascript">
 
-            displayWelcome("Timo, Stephen");    
+            displayWelcome(["Timo", "Stephen"]);    
             uhrzeit();
 
             function uhrzeit() {
@@ -27,6 +27,13 @@
             }
 
             function displayWelcome(participants){
+                var tmp = "";
+                for(i = 0;i<participants.length;i++){
+                    tmp += participants[i]
+                    if(i != participants.length-1){
+                        tmp += ", ";
+                    }
+                }
                 setInfoText(["Herzlich willkommen",participants,"Schön, dass ihr da seid"])
             }
 
@@ -38,6 +45,9 @@
                     temp += "<br/>";
                 }
                 document.getElementById('text').innerHTML = temp;
+            }
+
+            function setBackgroundImage(url){
             }
         </script>
     </body>
