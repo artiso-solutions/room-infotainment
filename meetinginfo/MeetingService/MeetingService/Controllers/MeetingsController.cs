@@ -33,7 +33,11 @@ namespace MeetingService.Controllers
         public MeetingInfo GetMeetingInfo([FromBody] RequestWithId request)
         {
             var id = request.Id;
-            return new MeetingInfo();
+            var list = new List<string>();
+            list.Add("Timo");
+            list.Add("Stephen");
+            list.Add("mueller@email.de");
+            return new MeetingInfo(){Participants = list, Body = "Ich lade euch zum Meeting ein",Subject = "Mein meeting"};
         }
     }
 

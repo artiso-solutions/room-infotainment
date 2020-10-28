@@ -1,4 +1,4 @@
-/* .infoText {
+.infoText {
     position: absolute;
     text-align: center;
     left: 50%;
@@ -23,5 +23,7 @@ body {
     background-image: url('https://prag.de/wp-content/uploads/2017/11/Aussichtspunkte-in-Prag-Die-besten-Ausblicke-auf-die-Stadt.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
     background-position: center;
-} */
+}
