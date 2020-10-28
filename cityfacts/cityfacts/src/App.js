@@ -1,8 +1,13 @@
 import Sketch from "react-p5";
+import WolframAlphaAPI from "./WolframAlphaAPI"
 
 function App() {
   let y = 0;
   let direction = "";
+
+  const waApi = WolframAlphaAPI('T6X4XL-RXUGV2XRUP');
+  waApi.getSimple('where is the ISS?').then(console.log).catch(console.error);
+
   return (
     <div>
       <header>Cityfacts</header>
