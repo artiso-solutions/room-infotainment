@@ -30,6 +30,15 @@ async function getTemperature(cityId: string) {
 
   return resp.data.main.temp;
 }
+async function getWeather(cityId: string) {
+  const resp = await axios.get<Weather>(
+    `http://api.openweathermap.org/data/2.5/weather?id=${cityId}&APPID=${API_KEY}&units=metric`
+  );
+
+  if (!resp.data) return 0;
+
+  return resp.data;
+}
 
 const app = express();
 
@@ -40,6 +49,15 @@ app.get("/", async (req, res) => {
 app.get("/temperature/:cityId", async (req, res) => {
   try {
     const temparature = await getTemperature(req.params.cityId);
+
+    res.json(temparature);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+app.get("/weather/:cityId", async (req, res) => {
+  try {
+    const temparature = await getWeather(req.params.cityId);
 
     res.json(temparature);
   } catch (error) {
