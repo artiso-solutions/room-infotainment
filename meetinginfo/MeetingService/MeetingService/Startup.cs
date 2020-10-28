@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MeetingService.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,9 @@ namespace MeetingService
         {
             services.AddCors();
             services.AddControllers();
+
+            services.AddSingleton<GreetingService>();
+            services.AddSingleton<ExchangeMeetingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
