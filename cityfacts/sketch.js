@@ -99,7 +99,7 @@ function drawC(words) {
 
 
 function draw() {
-  background(0);
+  background(255);
 }
 
 
