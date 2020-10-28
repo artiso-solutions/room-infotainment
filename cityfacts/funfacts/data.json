@@ -1,0 +1,18 @@
+[
+    {
+        "Cityname": "Kapstadt",
+        "Facts": [
+            "Fact 1",
+            "Fact 2",
+            "usw."
+        ]
+    },
+    {
+        "Cityname": "Barcelona",
+        "Facts": [
+            "Fact 1",
+            "Fact 2",
+            "usw."
+        ]
+    }
+]

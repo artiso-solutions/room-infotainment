@@ -1,0 +1,58 @@
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="jquery.simple-text-rotator.js"></script>
+    <!-- <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/simple-text-rotator/1.0.0/jquery.simple-text-rotator.min.js">
+    </script> -->
+    <script>
+
+        var jsonData = JSON.parse('[ { "Cityname": "Kapstadt", "Facts": [ "Im Stadtzentrum nahe der Hauptstraße Long Street, befindet sich tatsächlich ein Teil der Berliner Mauer.", "Luftgetrocknetes Rindfleisch gilt als der absolute Lieblingssnack in Kapstadt.", "Kapstadt ist nur zu einem Drittel die Hauptstadt Südafrikas. ", "In Kapstadt ertönt täglich um 12 Uhr mittags ein Kanonenschuss. ", "Robben Island, eine Insel knapp 11 Kilometer von Kapstadt entfernet, ist das Alcatraz Südafrikas.", "Ungefähr 20% der Autofahrer und Autofahrerinnen am Westkap besitzen angeblich keinen Führerschein.", "Meist beträgt das Intervall, um die Straße zu überqueren für Fußgänger nicht einmal zwei Sekunden.", "Bisweilen regnet es in Kapstadt Algenschaum.", "Beim Rhode Memorial nahe der Universität können Besucher durch die zerfallenen Käfige eines ehemaligen Zoos schleichen.", " Zu jedem Vollmond findet an einem beliebigen Ort in Kapstadt eine Vollmond-Meditation statt.", "Kapstadt hat den leisesten Club der Welt. Jeder trägt nämlich seine eigenen Kopfhörer und kann zu seiner eigenen Musik abtanzen.", "Kameelperd ist Afrikaans und bedeutet Giraffe.", "Am Boulders Beach leben 3000 Pinguine.", "Das «Test Kitchen» belegt den 63. Platz auf der Rangliste der 100 weltbesten Restaurants.", "Eine halbe Bier kostet in Kapstadt 1,29 Euro.", "Kapstadt besitzt Südafrikas einzige Rodelbahn." ] }, { "Cityname": "Rio", "Facts": [ "In Rio gab es im Jahr 1947 einen Anti-Bikini-Verein.", "Rio war einst die Hauptstadt von Portugal, was es zur einzigen europäischen Hauptstadt außerhalb des Kontinents machte?", "Beim Neujahreskonzert 2011 versammelte Rod Stuart sagenhafte 3,5 Mio. Zuschauer an der Copacabana.", "In Rio herrscht das ganze Jahr über Badewetter.", "In Rio gibt es den blauesten Himmel.", "Die Bewohner Rios gehören zu den schnellsten weltweit, wenn es darum geht in einen Bus ein- oder auszusteigen.", "Das mit 173,850 Besuchern größte Fußballsopiel fand 150 in Rio statt.", "2014 verlor die Christusstatue aufgrund eines Sturms einen Daumen.", "Die Mordrate in Rio beträgt 18.6 pro 100,000 Einwohner. Damit ist Rio sicherer als Detroit (44).", "Eine Spezialität Rios sind in einem Ziegenmagen zubereitete Innereien dieses Tiers.", "Ein Friseur verdient in Rio 591 USD." ] } ]');
+
+        $(document).ready(function () {
+            displayData();
+        });
+
+        function displayData() {
+            $(".rotate").textrotator({
+                animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+                separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+                speed: 2000, // How many milliseconds until the next word show.
+            });
+
+            // var completeText = jsonData.reduce((previous, current) => previous + "|" + current.Cityname);
+            // var completeText = jsonData.map(v => v.Cityname).join("|");
+            //--------------------------------
+            // var text = "";
+            // jsonData[0].Facts.forEach(element => {
+            //     if (text !== "")
+            //     {
+            //         text = text + "|";
+            //     }
+            //     text = text + element;
+            // });
+            // console.log(text);
+            // var rotationHostSpan = document.getElementById('rotationHost');
+            // rotationHostSpan.textContent = text;
+
+            //------------------
+            // jsonData.forEach(element => {
+            //     var divElem = document.createElement("div");
+            //     divElem.textContent = element.Cityname;
+
+            //     document.getElementsByTagName('body')[0].appendChild(divElem);
+            // });
+        }
+    </script>
+</head>
+<html>
+<H1>Fun Facts</H1>
+
+</html>
+
+<body onload="displayData()">
+    <div id="rotationHost" class="rotate" style="margin: auto;">Simple, Customizable, Light Weight, Easy</div>
+</body>
+<!-- 
+<div>Kapstadt
+    Robben Island wasn't just for prisoners.
+</div>, <div>Barcelona</div>, <div>Paris</div></div> -->
