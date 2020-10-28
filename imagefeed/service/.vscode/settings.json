@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/aa9dce55-8f0d-4abf-9276-2f0d0363e763/resourceGroups/generative-art/providers/Microsoft.Web/sites/generative-art-weather",
-    "appService.deploySubpath": "."
-}
